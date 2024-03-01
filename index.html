@@ -1,0 +1,22 @@
+def reverse_number(number):
+  reverse_number = 0
+  while number > 0:
+    digit = number % 10
+    number //= 10
+    reverse_number *= 10
+    reverse_number += digit
+  return reverse_number
+
+number_1 = int(input('Введите первое число: '))
+number_2 = int(input('Введите второе число: '))
+
+reverse_number_1 = reverse_number(number_1)
+reverse_number_2 = reverse_number(number_2)
+summ = reverse_number_1 + reverse_number_2
+reverse_summ = reverse_number(summ)
+
+print('Первое число наоборот:', reverse_number_1)
+print('Второе число наоборот:', reverse_number_2)
+print('Summa', summ)
+print('Сумма наоборот:', reverse_summ)
+print('special-app')
